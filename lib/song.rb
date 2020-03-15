@@ -1,6 +1,9 @@
 require 'pry'
 
 class Song
+  attr_accessor :name
+  attr_reader :artist
+  
   extend 
   Memorable::ClassMethods
   extend
@@ -9,8 +12,7 @@ class Song
   Memorable::InstanceMethods 
   include Paramable 
   
-  attr_accessor :name
-  attr_reader :artist
+  
 
   @@songs = []
 
